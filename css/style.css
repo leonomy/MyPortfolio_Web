@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+html, body{
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none; /*--スクロールした時の挙動を消す--*/
+}
+
+body{
+    width: 100%;
+    height: 100%; 
+    font-family: 'Times New Roman', serif;
+    color: #fff;
+    
+    background: linear-gradient(180deg, rgba(33,78,91,0.6), rgba(83,165,177,0.6)),url(../img/backkground-img.jpg);
+    background-size: cover;
+    position: relative;
+    min-height: 100%;
+    background-attachment: fixed; /*--背景画像の固定--*/
+    background-repeat: no-repeat; /*--背景画像の繰り返し--*/
+    background-position: center center; /*--背景画像の位置--*/
+	z-index: 2;
+
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+}
+
+h1{
+    margin: 0;
+    text-align: center;
+}
+
+h3{
+    font-size: 30px;
+}
+
+p{
+    font-size: 24px;
+}
+
+header{
+    position: fixed; /* ヘッダーを固定する */
+    top: 0; /* 上部から配置の基準位置を決める */
+    right: 0; /* 左から配置の基準位置を決める */
+    width: 15%; /* ヘッダーの横幅を指定する */
+    height: 100%; /* ヘッダーの高さを指定する */
+}
+
+main{
+    width: 85%;
+}
+
+footer{
+    margin: 250px 0 50px 0;
+}
+
+.logo{
+    width: 75%;
+    margin-top: 50px;
+}
+
+.nav-contents{
+    font-size: 36px;
+    font-weight: normal;
+    border-bottom: 1px solid #fff;
+}
+
+.nav-contents:hover, .sns:hover{
+    color: #e9a53a;
+    border-bottom: 1px solid #e9a53a;
+    transition: 0.5s all;
+}
+
+.main-visual-img{
+    width: 100%;
+}
+
+.title{
+    display: inline-block;
+    font-size: 48px;
+    font-weight: normal;
+    border-bottom: 1px solid #fff;
+    margin-left: 5%;
+}
+
+.fadeUp{
+    animation-name:fadeUpAnime;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+    
+@keyframes fadeUpAnime{
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    
+    
+    /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+     
+    .fadeUpTrigger{
+        opacity: 0;
+    }
+    
+
+.about{
+    margin-top: 200px;
+}
+
+.about-profile{
+    display: flex;
+    margin: 5% 10%;
+}
+
+.about-img{
+    width: 30%;
+    height: 30%;
+    margin-right: 5%;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+
+.tool-icon{
+    display: flex;
+}
+
+.icon{
+    width: 10%;
+    height: 10%;
+    margin-right: 10px;
+}
+
+.works{
+    margin-top: 250px;
+}
+
+.work-contents{
+    display: flex;
+}
+
+.work-content{
+    width: 40%;
+    margin: 5%;
+}
+
+.work-img{
+    width: 100%;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+
+.info{
+    margin-top: 250px;
+    margin-bottom: 100px;
+}
+
+.sns{
+    margin-left: 5%;
+    font-size: 30px;
+}
+
+footer p{
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+}
